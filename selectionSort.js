@@ -1,3 +1,4 @@
+module.exports = selectionSort
  function selectionSort(arr) {
     for (let i = 0; i < arr.length - 1; i++) {
       let smallest = arr[i];
