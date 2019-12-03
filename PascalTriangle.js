@@ -1,14 +1,19 @@
 module.exports = PascalTriangle
+
 function PascalTriangle(numRows) 
 {
+	if(!ValidInput(numRows))
+	{
+		return 0;
+	}
 	let triangle = [[1], [1,1]];
 	
 	if(numRows == 0){
 		  return[];}
-    else if(numRows === 1){
+    else if(numRows == 1){
       return[[1]];
     }
-    else if (numRows === 2){
+    else if (numRows == 2){
       return[[1],[1, 1]];
 		}
     else 
@@ -20,10 +25,11 @@ function PascalTriangle(numRows)
 		}
 		return triangle;
   }
+  
 function addRow(triangle){
 	let previous = triangle[triangle.length - 1];
 	let newRow = [1];
-	for(let i = 0; i < previous.lenght - 1; i++){
+	for(let i = 0; i < previous.length - 1; i++){
 			let current = previous[i];
 			let next = previous[i+1];
 			newRow.push(current + next);
@@ -31,3 +37,15 @@ function addRow(triangle){
 	newRow.push(1);
 	return triangle.push(newRow);
   }
+
+function ValidInput(input)
+{
+	if(parseInt(input) == NaN)
+	{
+		return false;
+	}
+	else
+	{
+		return input >= 0 && input <= 10
+	}	
+}
