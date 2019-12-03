@@ -1,0 +1,9 @@
+ø = 248, a = 97
+
+minimum path for 100 % statement coverage
+
+['ø','a']
+
+minimum path for 100 % path coverage
+
+['ø','a',1]
