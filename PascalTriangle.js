@@ -1,3 +1,4 @@
+module.exports = PascalTriangle
 function PascalTriangle(numRows) 
 {
 	let triangle = [[1], [1,1]];
