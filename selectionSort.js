@@ -1,15 +1,17 @@
  function selectionSort(arr) {
     for (let i = 0; i < arr.length - 1; i++) {
-      let smallest = arr[i];
-      if (isNaN(smallest)) {
-        if(/^[A-Za-z]+$/.test(smallest)){
-          smallest = smallest.charCodeAt(0)
+      let smallest = i;
+      /*
+      if (isNaN(arr[smallest])) {
+        if(/^[A-Za-z]+$/.test(arr[smallest])){
+          smallest = arr[smallest].charCodeAt(0)
         } else {
-          throw "Error: Only accept alphanumeric (US)"
+          continue;
         }
       }
+      */
       for (let j = i + 1; j < arr.length; j++) {
-        if (arr[j] < smallest) {
+        if (arr[j] < arr[smallest]) {
           smallest = j;
         }
       }
