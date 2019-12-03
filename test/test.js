@@ -1,13 +1,8 @@
-const expect = require('chai').expect;
-const selectionSort = require('../selectionSort.js');
+const expect  = require('chai').expect;
+const assert = require('assert');
 
-
-  describe('sort', function () {
-    it('should return the sorted array', function () {
-
-      let sortedArray = selectionSort([2,3,4]);
-// console.log("something happening...");
-      // let result = purchase.internetConnection();
-      expect(sortedArray).to.equal([2,3,4]);
+describe('Test setup', function() {
+    it('is 1 equal to 1', function() {
+        assert.equal(1, 1);
     });
-  });
+});
