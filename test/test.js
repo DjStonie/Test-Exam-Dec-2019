@@ -204,12 +204,6 @@ describe('Selection Sort', function () {
         Beneath is test for special cases
     */
 
-    /*
-    it('Negative letters', function() {
-        const sort = selectionSort('2,-d')
-        expect([2,100]).to.eql(sort)
-    */
-
     it('Multiple letters next to each other', function() {
         //Only takes the first letter
         const sort = selectionSort('abc')
@@ -220,7 +214,8 @@ describe('Selection Sort', function () {
         const sort = selectionSort('3.3,2.2,1.1')
         expect([1,2,3]).to.eql(sort)
     });
-  });
+
+});
 
 
 describe('Test setup', function() {
