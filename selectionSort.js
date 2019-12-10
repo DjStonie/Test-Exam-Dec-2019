@@ -12,7 +12,15 @@ function selectionSort(s) {
       }
     } 
     else {
-      arr[c] = parseInt(arr[c])
+      let i = parseInt(arr[c])
+      if (i > 100){
+        i = 100;
+      } 
+      else if (i < -100)
+      {
+        i = -100
+      }
+      arr[c] = parseInt(i)
     }
   }
   for (let i = 0; i < arr.length - 1; i++) {
