@@ -1,5 +1,5 @@
 const expect  = require('chai').expect;
-const assert = require('assert');
+const assert = require('chai').assert;
 const PascalTriangle = require('../PascalTriangle');
 const selectionSort = require('../selectionSort.js');
 
