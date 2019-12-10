@@ -7,8 +7,12 @@ function selectionSort(s) {
       if (/^[A-Za-z]+$/.test(arr[c])) {
         arr[c] = arr[c].charCodeAt(0);
       } else {
+        arr[c] = -1;
         continue;
       }
+    } 
+    else {
+      arr[c] = parseInt(arr[c])
     }
   }
   for (let i = 0; i < arr.length - 1; i++) {
