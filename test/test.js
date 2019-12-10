@@ -6,7 +6,7 @@ const selectionSort = require('../selectionSort.js');
   describe('sort', function () {
 	it('should return the sorted array', function () {
         let sortedArray = selectionSort("2,3,4");
-        expect(['2','3','4']).to.eql(sortedArray);
+        expect([2,3,4]).to.eql(sortedArray);
 	});
   });
 
