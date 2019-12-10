@@ -32,7 +32,7 @@ describe('Pascal Triangle', function() {
     });
 
     it('Pascal Triangle 0', function() {
-        assert.equal(PascalTriangle(0),0);
+        assert.equal(PascalTriangle(0),1);
     });
     it('Pascal Triangle Letter', function() {
         assert.equal(PascalTriangle("s"),0);
