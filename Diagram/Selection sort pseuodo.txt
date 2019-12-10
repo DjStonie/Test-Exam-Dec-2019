@@ -1,0 +1,26 @@
+Program SelectionSort
+
+Read s
+arr = s.split(',')
+
+For i = 0; i < arr.len; i++:
+	if arr[i] is not a number:
+		if arr[i] is in a-zA-Z:
+			arr[i] = arr[i].toAscii
+		else:
+			arr[i] = -1
+			continue
+	else:
+		arr[i] = parseInt(arr[i])
+
+for j = 0; j < arr.len - 1; j++:
+	smallest = i
+	for k = i + 1; k < arr.len; k++:
+		if (arr[k] < arr[smallest]:
+			smallest = k
+
+tmp = arr[smallest]
+arr[smallest] = arr[i]
+arr[i] = tmp
+
+return arr
