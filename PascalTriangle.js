@@ -1,4 +1,5 @@
-module.exports = PascalTriangle
+module.exports = { PascalTriangle, ValidInput }
+
 
 function PascalTriangle(numRows) 
 {
@@ -10,12 +11,12 @@ function PascalTriangle(numRows)
 	
 	if(numRows == 0){
 		  return[];}
-    else if(numRows == 1){
+    if(numRows == 1){
       return[[1]];
     }
-    else if (numRows == 2){
+    if (numRows == 2){
       return[[1],[1, 1]];
-		}
+	}
     else 
     {
       for(let i = 2; i < numRows; i++)
@@ -24,7 +25,7 @@ function PascalTriangle(numRows)
 			}
 		}
 		return triangle;
-  }
+}
   
 function addRow(triangle){
 	let previous = triangle[triangle.length - 1];

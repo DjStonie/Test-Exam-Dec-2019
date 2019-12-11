@@ -3,6 +3,7 @@ const assert = require('chai').assert;
 const PascalTriangle = require('../PascalTriangle');
 const selectionSort = require('../selectionSort.js');
 
+
 describe('Selection Sort', function () {
 	it('should return the sorted array', function () {
         let sortedArray = selectionSort("2,3,4");
@@ -226,42 +227,59 @@ describe('Test setup', function() {
 
 describe('Pascal Triangle', function() {
     it('Pascal Triangle 1', function() {
-        expect([[1]]).to.eql(PascalTriangle(1));
+        expect([[1]]).to.eql(PascalTriangle.PascalTriangle(1));
     
     });
 
     it('Pascal Triangle 2', function() {
-        expect([[1],[1,1]]).to.eql(PascalTriangle(2));
+        expect([[1],[1,1]]).to.eql(PascalTriangle.PascalTriangle(2));
    });
 
    it('Pascal Triangle 3', function() {
-       expect([[1],[1,1],[1,2,1]]).to.eql(PascalTriangle(3));
+       expect([[1],[1,1],[1,2,1]]).to.eql(PascalTriangle.PascalTriangle(3));
     });
 
     it('Pascal Triangle 0', function() {
-        assert.equal(PascalTriangle(0),0);
+        assert.equal(PascalTriangle.PascalTriangle(0),0);
     });
     it('Pascal Triangle Letter', function() {
-        assert.equal(PascalTriangle("s"),0);
+        assert.equal(PascalTriangle.PascalTriangle("s"),0);
     });
     it('Pascal Triangle Max', function() {
         expect([[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1],
         [1,5,10,10,5,1],[1,6,15,20,15,6,1],[1,7,21,35,35,21,7,1],[1,8,28,56,70,56,28,8,1],
-        [1,9,36,84,126,126,84,36,9,1]]).to.eql(PascalTriangle(10));
+        [1,9,36,84,126,126,84,36,9,1]]).to.eql(PascalTriangle.PascalTriangle(10));
     });
     it('Pascal Triangle Negative Value', function() {
-        assert.equal(PascalTriangle(-1),0);
+        assert.equal(PascalTriangle.PascalTriangle(-1),0);
     });
    
     it('Pascal Triangle MaxMinusOne Value', function() {
-        expect([[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1],[1,5,10,10,5,1],[1,6,15,20,15,6,1],[1,7,21,35,35,21,7,1],[1,8,28,56,70,56,28,8,1]]).to.eql(PascalTriangle(9));
+        expect([[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1],[1,5,10,10,5,1],[1,6,15,20,15,6,1],[1,7,21,35,35,21,7,1],[1,8,28,56,70,56,28,8,1]]).to.eql(PascalTriangle.PascalTriangle(9));
     });
 
     it('Pascal Triangle ArrayStrings Value', function() {
-        assert.equal(PascalTriangle(["a","b"]),0);
+        assert.equal(PascalTriangle.PascalTriangle(["a","b"]),0);
     });
 
     it('Pascal Triangle Middle Value', function() {
-        expect([[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]).to.eql(PascalTriangle(5));
+        expect([[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]).to.eql(PascalTriangle.PascalTriangle(5));
+    });
+});
+
+
+describe('Valid Input', function() {
+    it('Valid Input Not an Int', function() {
+        assert.equal(PascalTriangle.ValidInput("A"),false);
+    });
+    it('Valid Input Int withing limitation', function() {
+        assert.equal(PascalTriangle.ValidInput(5),true);
+    });
+    it('Valid Input Int over limitation', function() {
+        assert.equal(PascalTriangle.ValidInput(11),false);
+    });
+
+    it('Valid Input Int under limitation', function() {
+        assert.equal(PascalTriangle.ValidInput(-1),false);
     });
 });

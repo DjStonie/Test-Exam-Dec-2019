@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 
 
 function StartPascalTriangle(){
-  rl.question('How big do you want us to make the Pascal triangle? ', (answer) => {
+  rl.question('How big do you want us to make the Pascal triangle? (Min = 0, Max = 10)', (answer) => {
     console.log(`Thank you, we will generate one with ${answer} lines`);
     console.log(PascalTriangle(`${answer}`));
   }); 
