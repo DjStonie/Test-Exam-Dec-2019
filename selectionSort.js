@@ -2,13 +2,11 @@ module.exports = selectionSort
 function selectionSort(s) {
   arr = s.split(",");
   for (let c = 0; c < arr.length; c++) {
-    const element = arr[c];
     if (isNaN(arr[c])) {
       if (/^[A-Za-z]+$/.test(arr[c])) {
         arr[c] = arr[c].charCodeAt(0);
       } else {
         arr[c] = -1;
-        continue;
       }
     } 
     else {
@@ -20,7 +18,7 @@ function selectionSort(s) {
       {
         i = -100
       }
-      arr[c] = parseInt(i)
+      arr[c] = i
     }
   }
   for (let i = 0; i < arr.length - 1; i++) {
