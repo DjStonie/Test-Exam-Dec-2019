@@ -1,4 +1,5 @@
 module.exports = selectionSort
+
 function selectionSort(s) {
   arr = s.split(",");
   for (let c = 0; c < arr.length; c++) {

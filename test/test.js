@@ -42,7 +42,7 @@ describe('Selection Sort', function() {
       { val: '3.3,2.2,1.1', result: [1,2,3],message: "Float numbers to int" }
     ];
   
-    assertions.forEach(({val, result,message}) => {
+    assertions.forEach(({val, result, message}) => {
       describe(`Selection Sort Testing ${message}`, function() {
         it(`should return ${result}`, function() {
           expect(selectionSort(val)).to.eql(result)
