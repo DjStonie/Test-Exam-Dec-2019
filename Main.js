@@ -17,7 +17,7 @@ function StartPascalTriangle(){
 }
 
 function StartSorting(){
-  rl.question('\nWhat do you want us to sort?\n\nYou can enter integer 0-9 and the english alphabet a-zA-Z\n\nLetters will be converted to unicode decimals. \n\nSeparate the signs with a comma \n e.g. a,1,b,6,d \n\n', (answer) => {
+  rl.question('\nWhat do you want us to sort?\n\nYou can enter integer 0-9 and the english alphabet a-z & A-Z\n\nLetters will be converted to unicode decimals. \n\nSeparate the signs with a comma \n e.g. a,1,b,6,d \n\n', (answer) => {
     console.log(`Here it is sorted`);
     console.log(selectionSort(answer));
   }); 
