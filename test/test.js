@@ -14,7 +14,7 @@ describe('Selection Sort', function() {
       { val: '99', result: [99],message: "Upper boundary integer limit" },
       //Boundary based on unicode
       { val: '´', result: [-1],message: "Lower boundary lower case alphabet over limit" },
-      { val: 'a', result: [9],message: "Lower boundary lower case alphabet mid limit" },
+      { val: 'a', result: [97],message: "Lower boundary lower case alphabet mid limit" },
       { val: 'b', result: [98],message: "Lower boundary lower case alphabet under limit" },
       { val: '{', result: [-1],message: "Upper boundary lower case alphabet over limit" },
       { val: 'z', result: [122],message: "Upper boundary lower case alphabet mid limit" },
