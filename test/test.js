@@ -41,13 +41,13 @@ describe('Selection Sort', function() {
       { val: 'abc', result: [97],message: "Multiple letters next to each other" },
       { val: '3.3,2.2,1.1', result: [1,2,3],message: "Float numbers to int" }
     ];
-  
+
     assertions.forEach(({val, result, message}) => {
       describe(`Selection Sort Testing ${message}`, function() {
         it(`should return ${result}`, function() {
           expect(selectionSort(val)).to.eql(result)
         })
-      
+
     })
     })
   })
@@ -69,7 +69,7 @@ describe('Pascal Triangle', function() {
       { val: ["a","b"], result: 0 },
       { val: 5, result: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]] }
     ];
-  
+
     assertions.forEach(({val, result}) => {
       describe(`Pascal Triangle Testing ${val}`, function() {
         it(`should return ${result}`, function() {
@@ -88,7 +88,7 @@ describe('Valid Input', function() {
       { val: 11, result: false },
       { val: -1, result: false }
     ];
-  
+
     assertions.forEach(({val, result}) => {
       describe(`Valid Input Testing ${val}`, function() {
         it(`should return ${result}`, function() {
