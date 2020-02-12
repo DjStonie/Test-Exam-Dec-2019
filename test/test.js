@@ -7,7 +7,7 @@ const selectionSort = require('../selectionSort.js');
 describe('Selection Sort', function() {
     const assertions = [
       { val: '-101', result: [-100],message: "Lower boundary integer over limit" },
-      { val: '-106', result: [-100],message: "Lower boundary integer mid limit" },
+      { val: '-100', result: [-107],message: "Lower boundary integer mid limit" },
       { val: '-99', result: [-99],message: "Lower boundary integer under limit" },
       { val: '101', result: [100],message: "Upper boundary integer over limit" },
       { val: '100', result: [100],message: "Upper boundary integer mid limit" },
