@@ -11,7 +11,7 @@ describe('Selection Sort', function() {
       { val: '-99', result: [-99],message: "Lower boundary integer under limit" },
       { val: '101', result: [100],message: "Upper boundary integer over limit" },
       { val: '100', result: [100],message: "Upper boundary integer mid limit" },
-      { val: '99', result: [99],message: "Upper boundary integer limit" },
+      { val: '99', result: [99],message: "Upper boundary integer under limit" },
       //Boundary based on unicode
       { val: '´', result: [-1],message: "Lower boundary lower case alphabet over limit" },
       { val: 'a', result: [97],message: "Lower boundary lower case alphabet mid limit" },
